@@ -16,6 +16,8 @@ class MainView: UIView {
     @IBOutlet var answerLabel: UILabel?
     @IBOutlet var tooltipLabel: UILabel?
     
+    @IBOutlet var transitionView: TransitionView?
+    
     private var isStarted = false
     
     // MARK: - View Lifecycle
@@ -32,6 +34,7 @@ class MainView: UIView {
     
     func show(answer: AnswerModel) {
         DispatchQueue.main.async { [weak self] in
+            self?.transitionView?.hide()
             if self?.isStarted == false {
                 self?.updateUI()
             }
@@ -41,13 +44,14 @@ class MainView: UIView {
     }
     
     func getQuestion() -> String? {
+        self.transitionView?.show()
         return String.random()
     }
     
     // MARK: - Private API
     
     private func updateUI() {
-        self.invitationLabel?.removeFromSuperview()
+        self.invitationLabel?.text = ""
         self.tooltipLabel?.text = "Shake again if you want more answers!"
         self.isStarted = true
     }
