@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainViewController: UIViewController, Typeable {
+class MainViewController: BaseViewController<MainView>, Typeable {
 
     // MARK: - Properties
     
@@ -25,14 +25,19 @@ class MainViewController: UIViewController, Typeable {
     
     // MARK: - Public API
     
-    @IBAction func onTest(_ sender: UIButton) {
-        self.networkService.answer(to: "Test") { result in
-            debugPrint(result)
-        }
+    override func configureUI() {
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Settings", style: .plain, target: self, action: #selector(self.onSettings))
     }
     
-    func configureUI() {
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Settings", style: .plain, target: self, action: #selector(self.onSettings))
+    @IBAction func onTest(_ sender: UIButton) {
+        self.networkService.answer(to: "Test") { [weak self] result in
+            switch result {
+            case let .success(answer):
+                break
+            case let .failure(error):
+                self?.showAlert(error: error)
+            }
+        }
     }
     
     @objc func onSettings(_ sender: UIBarButtonItem) {

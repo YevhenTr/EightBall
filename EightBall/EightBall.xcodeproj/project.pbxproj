@@ -18,6 +18,8 @@
 		62A3F23F231286F50041134D /* AnswerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A3F23E231286F50041134D /* AnswerModel.swift */; };
 		62A3F24123128BE40041134D /* NSError+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A3F24023128BE40041134D /* NSError+Extensions.swift */; };
 		62A3F24523128C1A0041134D /* AnswerParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A3F24423128C1A0041134D /* AnswerParser.swift */; };
+		62A3F248231290EA0041134D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A3F247231290EA0041134D /* BaseViewController.swift */; };
+		62A3F24C231292F10041134D /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A3F24B231292F10041134D /* UIViewController+Alert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		62A3F23E231286F50041134D /* AnswerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerModel.swift; sourceTree = "<group>"; };
 		62A3F24023128BE40041134D /* NSError+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSError+Extensions.swift"; sourceTree = "<group>"; };
 		62A3F24423128C1A0041134D /* AnswerParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerParser.swift; sourceTree = "<group>"; };
+		62A3F247231290EA0041134D /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		62A3F24B231292F10041134D /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,7 @@
 		62A3F22B2312619D0041134D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				62A3F24A231292CA0041134D /* UIViewController */,
 				62A3F24323128C050041134D /* NSError */,
 			);
 			path = Extensions;
@@ -107,6 +112,7 @@
 		62A3F22C2312642A0041134D /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				62A3F246231290CA0041134D /* BaseViewController */,
 				62A3F231231264C10041134D /* MainViewController */,
 			);
 			path = UI;
@@ -186,6 +192,22 @@
 			path = NSError;
 			sourceTree = "<group>";
 		};
+		62A3F246231290CA0041134D /* BaseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				62A3F247231290EA0041134D /* BaseViewController.swift */,
+			);
+			path = BaseViewController;
+			sourceTree = "<group>";
+		};
+		62A3F24A231292CA0041134D /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				62A3F24B231292F10041134D /* UIViewController+Alert.swift */,
+			);
+			path = UIViewController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -262,6 +284,8 @@
 				62A3F24523128C1A0041134D /* AnswerParser.swift in Sources */,
 				62A3F218231261750041134D /* AppDelegate.swift in Sources */,
 				62A3F23F231286F50041134D /* AnswerModel.swift in Sources */,
+				62A3F24C231292F10041134D /* UIViewController+Alert.swift in Sources */,
+				62A3F248231290EA0041134D /* BaseViewController.swift in Sources */,
 				62A3F233231264F30041134D /* MainView.swift in Sources */,
 				62A3F24123128BE40041134D /* NSError+Extensions.swift in Sources */,
 				62A3F23923126C6D0041134D /* Typeable.swift in Sources */,
