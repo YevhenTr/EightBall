@@ -52,8 +52,9 @@ class MainViewController: BaseViewController<MainView> {
             switch result {
             case let .success(answer):
                 self?.rootView?.show(answer: answer)
-            case let .failure(error):
-                self?.showAlert(error: error)
+            case .failure:
+                self?.getStorageService().randomAnswer()
+                    .map { self?.rootView?.show(answer: $0) }
             }
         }
     }

@@ -6,6 +6,8 @@
 //  Copyright © 2019 Yevhen Triukhan. All rights reserved.
 //
 
+import CoreData
+
 struct FullAnswerModel: Codable {
     
     let content: AnswerModel
@@ -21,5 +23,31 @@ struct AnswerModel: Codable {
     
     enum CodingKeys: String, CodingKey {
         case answer = "answer"
+    }
+}
+
+extension AnswerModel {
+    
+    static var yesModel: AnswerModel {
+        return AnswerModel(answer: "YES!")
+    }
+    
+    func asCDAnswerModel(context: NSManagedObjectContext) -> CDAnswerModel {
+        let managedObject = CDAnswerModel(context: context)
+        
+        managedObject.answer = self.answer
+        
+        return managedObject
+    }
+}
+
+extension CDAnswerModel {
+    
+    func asAnswerModel() -> AnswerModel? {
+        if let answer = self.answer {
+            return AnswerModel(answer: answer)
+        } else {
+            return nil
+        }
     }
 }

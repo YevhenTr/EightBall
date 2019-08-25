@@ -16,6 +16,14 @@ class BaseViewController<RootView>: UIViewController {
         return self.viewIfLoaded as? RootView
     }
     
+    private let storageService = StorageService()
+    
+    // MARK: - Init and Deinit
+    
+    deinit {
+        debugPrint("\(self) deinit")
+    }
+    
     // MARK: - View Lifecycle
     
     override func viewDidLoad() {
@@ -30,4 +38,7 @@ class BaseViewController<RootView>: UIViewController {
         fatalError("Not implented in base class")
     }
 
+    func getStorageService() -> StorageService {
+        return self.storageService
+    }
 }

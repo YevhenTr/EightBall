@@ -9,8 +9,6 @@
 import UIKit
 
 class SettingsViewController: BaseViewController<SettingsView> {
-
-    let storage = StorageService()
     
     // MARK: - Public API
 
@@ -27,12 +25,7 @@ class SettingsViewController: BaseViewController<SettingsView> {
         self.showForm(title: "New Answer",
                       message: "Add new predefined answer.",
                       placeholder: "New Aswer",
-                      completion: { newAnswer in
-                        if !newAnswer.isEmpty {
-                            self.storage.add(answer: AnswerModel(answer: newAnswer))
-                            self.updateDataSource()
-                        }
-                    })
+                      completion: self.newAnswerHandling)
     }
     
     // MARK: - Private API
@@ -43,6 +36,13 @@ class SettingsViewController: BaseViewController<SettingsView> {
     }
     
     private func updateDataSource() {
-        self.rootView?.dataSource = self.storage.allAnswers() ?? []
+        self.rootView?.dataSource = self.getStorageService().allAnswers() ?? []
+    }
+    
+    private func newAnswerHandling(_ newAnswer: String) {
+        if !newAnswer.isEmpty {
+            self.getStorageService().add(answer: AnswerModel(answer: newAnswer))
+            self.updateDataSource()
+        }
     }
 }

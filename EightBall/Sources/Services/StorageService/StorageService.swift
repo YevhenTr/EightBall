@@ -27,6 +27,16 @@ class StorageService {
     
     private var context: NSManagedObjectContext { return self.persistentContainer.viewContext }
     
+    // MARK: - Init and Deinit
+    
+    init() {
+        self.allAnswers().map {
+            if $0.count == 0 {
+                self.add(answer: AnswerModel.yesModel)
+            }
+        }
+    }
+    
     // MARK: - Public API
         
     func add(answer: AnswerModel) {
@@ -37,7 +47,7 @@ class StorageService {
     }
     
     func randomAnswer() -> AnswerModel? {
-        return self.allAnswers()?.randomElement()
+        return self.allAnswers()?.randomElement() ?? AnswerModel.yesModel
     }
     
     func allAnswers() -> [AnswerModel]? {
@@ -81,27 +91,5 @@ class StorageService {
         request.predicate = NSPredicate(format: "answer == %@", answer.answer)
         
         return request
-    }
-}
-
-extension AnswerModel {
-    
-    func asCDAnswerModel(context: NSManagedObjectContext) -> CDAnswerModel {
-        let managedObject = CDAnswerModel(context: context)
-        
-        managedObject.answer = self.answer
-        
-        return managedObject
-    }
-}
-
-extension CDAnswerModel {
-    
-    func asAnswerModel() -> AnswerModel? {
-        if let answer = self.answer {
-            return AnswerModel(answer: answer)
-        } else {
-            return nil
-        }
     }
 }
