@@ -21,15 +21,15 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xhS-IC-HZv">
-                    <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                    <rect key="frame" x="18" y="88" width="378" height="774"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="xhS-IC-HZv" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="4Tg-Sm-c07"/>
-                <constraint firstItem="xhS-IC-HZv" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="D0f-Zd-OVL"/>
-                <constraint firstItem="xhS-IC-HZv" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="TR2-Ox-Xrk"/>
+                <constraint firstItem="xhS-IC-HZv" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="18" id="D0f-Zd-OVL"/>
+                <constraint firstItem="xhS-IC-HZv" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" constant="-18" id="TR2-Ox-Xrk"/>
                 <constraint firstItem="xhS-IC-HZv" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="vOI-5g-TTJ"/>
             </constraints>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>

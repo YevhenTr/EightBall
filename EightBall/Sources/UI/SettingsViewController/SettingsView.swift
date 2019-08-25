@@ -13,7 +13,11 @@ class SettingsView: UIView {
     // MARK: - Properties
     
     @IBOutlet var tableView: UITableView?
-    var dataSource = ["aaaa", "bbb"]
+    var dataSource = [String]() {
+        didSet {
+            self.tableView?.reloadData()
+        }
+    }
     
     // MARK: - View Lifecycle
     
@@ -37,7 +41,7 @@ extension SettingsView: UITableViewDataSource, UITableViewDelegate {
         let cell = tableView.dequeueReusableCell(withCellClass: AnswerTableViewCell.self, for: indexPath)
         
         (cell as? AnswerTableViewCell).map {
-            $0.textLabel?.text = indexPath.row.description
+            $0.answerTextView?.text = self.dataSource[indexPath.row]
         }
         
         return cell

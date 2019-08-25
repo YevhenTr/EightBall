@@ -17,6 +17,8 @@ class SettingsViewController: BaseViewController<SettingsView> {
     override func configureUI() {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(self.onCancel))
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(self.onAdd))
+        
+        self.updateDataSource()
     }
     
     @objc func onCancel() {
@@ -30,7 +32,14 @@ class SettingsViewController: BaseViewController<SettingsView> {
                       completion: { newAnswer in
                         if !newAnswer.isEmpty {
                             self.storage.add(answer: newAnswer)
+                            self.updateDataSource()
                         }
                     })
+    }
+    
+    // MARK: - Private API
+    
+    private func updateDataSource() {
+        self.rootView?.dataSource = self.storage.allAnswers()
     }
 }
