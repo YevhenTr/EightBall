@@ -15,6 +15,15 @@ class StorageService {
     
     // MARK: - Properties
     
+    func isContain(answer: String) -> Bool {
+        let request = self.requestToFind(answer: answer)
+        
+        return (try? self.context.fetch(request))?
+            .compactMap { $0 }
+            .first
+            .isSome ?? false
+    }
+    
     private lazy var persistentContainer: NSPersistentContainer = {
         let container = NSPersistentContainer(name: "CDAnswerModel")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
@@ -30,8 +39,10 @@ class StorageService {
     // MARK: - Public API
         
     func add(answer: String) {
-        let _ = answer.asCDAnswerModel(context: self.context)
-        self.saveContext()
+        if !self.isContain(answer: answer) {
+            let _ = answer.asCDAnswerModel(context: self.context)
+            self.saveContext()
+        }
     }
     
     func randomAnswer() -> String {
@@ -46,9 +57,8 @@ class StorageService {
     }
     
     func delete(answer: String) {
-        let request: NSFetchRequest<CDAnswerModel> = CDAnswerModel.fetchRequest()
+        let request = self.requestToFind(answer: answer)
         
-        request.predicate = NSPredicate(format: "answer == %@", answer)
         (try? self.context.fetch(request))?
             .first
             .map { self.context.delete($0) }
@@ -63,6 +73,14 @@ class StorageService {
         if context.hasChanges {
             try? context.save()
         }
+    }
+    
+    private func requestToFind(answer: String) -> NSFetchRequest<CDAnswerModel> {
+        let request: NSFetchRequest<CDAnswerModel> = CDAnswerModel.fetchRequest()
+        
+        request.predicate = NSPredicate(format: "answer == %@", answer)
+        
+        return request
     }
 }
 

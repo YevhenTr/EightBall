@@ -30,6 +30,7 @@
 		62E97F892312D1980035CAE2 /* AnswerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62E97F872312D1980035CAE2 /* AnswerTableViewCell.xib */; };
 		62E97F8C2312D4D80035CAE2 /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E97F8B2312D4D80035CAE2 /* UITableView+Extensions.swift */; };
 		62E97F8F2312D52B0035CAE2 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E97F8E2312D52B0035CAE2 /* Functions.swift */; };
+		62E97F922312DCD20035CAE2 /* Optional+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E97F912312DCD20035CAE2 /* Optional+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		62E97F872312D1980035CAE2 /* AnswerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnswerTableViewCell.xib; sourceTree = "<group>"; };
 		62E97F8B2312D4D80035CAE2 /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
 		62E97F8E2312D52B0035CAE2 /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
+		62E97F912312DCD20035CAE2 /* Optional+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 		62A3F22B2312619D0041134D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				62E97F902312DCC00035CAE2 /* Optional */,
 				62E97F8A2312D4BF0035CAE2 /* UITableView */,
 				62A3F24D231298820041134D /* String */,
 				62A3F24A231292CA0041134D /* UIViewController */,
@@ -294,6 +297,14 @@
 			path = Functions;
 			sourceTree = "<group>";
 		};
+		62E97F902312DCC00035CAE2 /* Optional */ = {
+			isa = PBXGroup;
+			children = (
+				62E97F912312DCD20035CAE2 /* Optional+Extensions.swift */,
+			);
+			path = Optional;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -370,6 +381,7 @@
 				62A3F23C231279570041134D /* NetworkService.swift in Sources */,
 				62A3F2352312652A0041134D /* MainViewController.swift in Sources */,
 				62A3F24523128C1A0041134D /* AnswerParser.swift in Sources */,
+				62E97F922312DCD20035CAE2 /* Optional+Extensions.swift in Sources */,
 				62A3F218231261750041134D /* AppDelegate.swift in Sources */,
 				62A3F23F231286F50041134D /* AnswerModel.swift in Sources */,
 				62A3F2552312A6EA0041134D /* TransitionView.swift in Sources */,
