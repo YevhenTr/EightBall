@@ -25,6 +25,8 @@
 		62A3F2582312B7C10041134D /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A3F2572312B7C10041134D /* SettingsView.swift */; };
 		62A3F25A2312B7DA0041134D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A3F2592312B7DA0041134D /* SettingsViewController.swift */; };
 		62A3F25C2312B7EB0041134D /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62A3F25B2312B7EB0041134D /* SettingsViewController.xib */; };
+		62A3F25F2312BC700041134D /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A3F25E2312BC700041134D /* StorageService.swift */; };
+		62A3F2622312C3C20041134D /* CDAnswerModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 62A3F2602312C3C20041134D /* CDAnswerModel.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		62A3F2572312B7C10041134D /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		62A3F2592312B7DA0041134D /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		62A3F25B2312B7EB0041134D /* SettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
+		62A3F25E2312BC700041134D /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
+		62A3F2612312C3C20041134D /* CDAnswerModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CDAnswerModel.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +137,7 @@
 		62A3F22D231264310041134D /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				62A3F25D2312BC580041134D /* StorageService */,
 				62A3F23A2312793E0041134D /* NetworkService */,
 			);
 			path = Services;
@@ -185,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				62A3F23E231286F50041134D /* AnswerModel.swift */,
+				62A3F2602312C3C20041134D /* CDAnswerModel.xcdatamodeld */,
 			);
 			path = Answer;
 			sourceTree = "<group>";
@@ -245,6 +251,14 @@
 				62A3F25B2312B7EB0041134D /* SettingsViewController.xib */,
 			);
 			path = SettingsViewController;
+			sourceTree = "<group>";
+		};
+		62A3F25D2312BC580041134D /* StorageService */ = {
+			isa = PBXGroup;
+			children = (
+				62A3F25E2312BC700041134D /* StorageService.swift */,
+			);
+			path = StorageService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -329,6 +343,8 @@
 				62A3F248231290EA0041134D /* BaseViewController.swift in Sources */,
 				62A3F233231264F30041134D /* MainView.swift in Sources */,
 				62A3F25A2312B7DA0041134D /* SettingsViewController.swift in Sources */,
+				62A3F2622312C3C20041134D /* CDAnswerModel.xcdatamodeld in Sources */,
+				62A3F25F2312BC700041134D /* StorageService.swift in Sources */,
 				62A3F24F231298970041134D /* String+Random.swift in Sources */,
 				62A3F24123128BE40041134D /* NSError+Extensions.swift in Sources */,
 				62A3F23923126C6D0041134D /* Typeable.swift in Sources */,
@@ -522,6 +538,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		62A3F2602312C3C20041134D /* CDAnswerModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				62A3F2612312C3C20041134D /* CDAnswerModel.xcdatamodel */,
+			);
+			currentVersion = 62A3F2612312C3C20041134D /* CDAnswerModel.xcdatamodel */;
+			path = CDAnswerModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 62A3F20C231261750041134D /* Project object */;
 }

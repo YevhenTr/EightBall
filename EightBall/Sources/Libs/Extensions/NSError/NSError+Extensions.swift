@@ -19,4 +19,14 @@ extension NSError {
         
         return NSError(domain: "Wrong question: string is nil.", code: 9998, userInfo: nil)
     }
+    
+    static var wrongURL: NSError {
+        
+        return NSError(domain: "Wrong URL: requested URL cannot be found.", code: 9997, userInfo: nil)
+    }
+    
+    static var failedWrite: NSError {
+        
+        return NSError(domain: "Writing error: failed to write file.", code: 9997, userInfo: nil)
+    }
 }
