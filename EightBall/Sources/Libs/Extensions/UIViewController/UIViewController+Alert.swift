@@ -23,4 +23,21 @@ extension UIViewController {
     func showAlert(error: Error) {
         self.showAlert(title: "Error", message: error.localizedDescription)
     }
+    
+    func showForm(title: String,
+                  message: String,
+                  placeholder: String,
+                  completion: @escaping (String) -> ()) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alertController.addTextField() { $0.placeholder =  placeholder }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
+            alertController.textFields?.first?.text.map { completion($0) }
+        }
+        
+        [cancelAction, okAction].forEach { alertController.addAction($0) }
+        
+        self.present(alertController, animated: true, completion: nil)
+    }
 }

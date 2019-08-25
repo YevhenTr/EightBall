@@ -10,6 +10,8 @@ import UIKit
 
 class SettingsViewController: BaseViewController<SettingsView> {
 
+    let storage = StorageService()
+    
     // MARK: - Public API
 
     override func configureUI() {
@@ -22,6 +24,13 @@ class SettingsViewController: BaseViewController<SettingsView> {
     }
     
     @objc func onAdd() {
-        self.dismiss(animated: true)
+        self.showForm(title: "New Answer",
+                      message: "Add new predefined answer.",
+                      placeholder: "New Aswer",
+                      completion: { newAnswer in
+                        if !newAnswer.isEmpty {
+                            self.storage.add(answer: newAnswer)
+                        }
+                    })
     }
 }
