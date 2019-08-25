@@ -17,6 +17,7 @@ final class NetworkService {
     private enum Constants {
         
         static let mainURLString = "https://8ball.delegator.com/magic/JSON/"
+        static let defaultTimeout = 5.0
     }
     
     // MARK: - Properties
@@ -31,8 +32,9 @@ final class NetworkService {
         self.currentTask?.cancel()
     }
     
-    init(session: URLSession = URLSession.shared) {
-        self.session = session
+    init(sessionConfig: URLSessionConfiguration = URLSessionConfiguration.default) {
+        sessionConfig.timeoutIntervalForRequest = Constants.defaultTimeout
+        self.session = URLSession(configuration: sessionConfig)
     }
     
     // MARK: - Public API
