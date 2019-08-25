@@ -14,9 +14,9 @@ final class AnswerParser {
     
     func parse(data: Data) -> Result<AnswerModel, Error> {
         do {
-            let answer = try JSONDecoder().decode(AnswerModel.self, from: data)
+            let answer = try JSONDecoder().decode(FullAnswerModel.self, from: data)
             
-            return .success(answer)
+            return .success(answer.content)
         } catch {
             return .failure(error)
         }

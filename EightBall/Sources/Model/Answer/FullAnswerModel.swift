@@ -6,17 +6,16 @@
 //  Copyright © 2019 Yevhen Triukhan. All rights reserved.
 //
 
-struct AnswerModel: Codable {
+struct FullAnswerModel: Codable {
     
-    let content: AnswerContentModel
-    var answer: String { return self.content.answer }
+    let content: AnswerModel
     
     enum CodingKeys: String, CodingKey {
         case content = "magic"
     }
 }
 
-struct AnswerContentModel: Codable {
+struct AnswerModel: Codable {
     
     let answer: String
     

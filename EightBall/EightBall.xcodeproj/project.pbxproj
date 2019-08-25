@@ -14,7 +14,7 @@
 		62A3F2352312652A0041134D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A3F2342312652A0041134D /* MainViewController.swift */; };
 		62A3F237231265380041134D /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62A3F236231265380041134D /* MainViewController.xib */; };
 		62A3F23C231279570041134D /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A3F23B231279570041134D /* NetworkService.swift */; };
-		62A3F23F231286F50041134D /* AnswerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A3F23E231286F50041134D /* AnswerModel.swift */; };
+		62A3F23F231286F50041134D /* FullAnswerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A3F23E231286F50041134D /* FullAnswerModel.swift */; };
 		62A3F24123128BE40041134D /* NSError+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A3F24023128BE40041134D /* NSError+Extensions.swift */; };
 		62A3F24523128C1A0041134D /* AnswerParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A3F24423128C1A0041134D /* AnswerParser.swift */; };
 		62A3F248231290EA0041134D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A3F247231290EA0041134D /* BaseViewController.swift */; };
@@ -44,7 +44,7 @@
 		62A3F2342312652A0041134D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		62A3F236231265380041134D /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		62A3F23B231279570041134D /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
-		62A3F23E231286F50041134D /* AnswerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerModel.swift; sourceTree = "<group>"; };
+		62A3F23E231286F50041134D /* FullAnswerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullAnswerModel.swift; sourceTree = "<group>"; };
 		62A3F24023128BE40041134D /* NSError+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSError+Extensions.swift"; sourceTree = "<group>"; };
 		62A3F24423128C1A0041134D /* AnswerParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerParser.swift; sourceTree = "<group>"; };
 		62A3F247231290EA0041134D /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -199,7 +199,7 @@
 		62A3F23D231286E20041134D /* Answer */ = {
 			isa = PBXGroup;
 			children = (
-				62A3F23E231286F50041134D /* AnswerModel.swift */,
+				62A3F23E231286F50041134D /* FullAnswerModel.swift */,
 				62A3F2602312C3C20041134D /* CDAnswerModel.xcdatamodeld */,
 			);
 			path = Answer;
@@ -410,7 +410,7 @@
 				62A3F24523128C1A0041134D /* AnswerParser.swift in Sources */,
 				62E97F922312DCD20035CAE2 /* Optional+Extensions.swift in Sources */,
 				62A3F218231261750041134D /* AppDelegate.swift in Sources */,
-				62A3F23F231286F50041134D /* AnswerModel.swift in Sources */,
+				62A3F23F231286F50041134D /* FullAnswerModel.swift in Sources */,
 				62A3F2552312A6EA0041134D /* TransitionView.swift in Sources */,
 				62A3F24C231292F10041134D /* UIViewController+Alert.swift in Sources */,
 				62E97F982312F5930035CAE2 /* ShakeDetector.swift in Sources */,
