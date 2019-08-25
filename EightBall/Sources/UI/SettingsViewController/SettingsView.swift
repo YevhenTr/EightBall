@@ -13,7 +13,7 @@ class SettingsView: UIView {
     // MARK: - Properties
     
     @IBOutlet var tableView: UITableView?
-    var dataSource = [String]() {
+    var dataSource = [AnswerModel]() {
         didSet {
             self.tableView?.reloadData()
         }
@@ -41,7 +41,7 @@ extension SettingsView: UITableViewDataSource, UITableViewDelegate {
         let cell = tableView.dequeueReusableCell(withCellClass: AnswerTableViewCell.self, for: indexPath)
         
         (cell as? AnswerTableViewCell).map {
-            $0.answerTextView?.text = self.dataSource[indexPath.row]
+            $0.answerTextView?.text = self.dataSource[indexPath.row].answer
         }
         
         return cell

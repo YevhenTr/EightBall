@@ -29,7 +29,7 @@ class SettingsViewController: BaseViewController<SettingsView> {
                       placeholder: "New Aswer",
                       completion: { newAnswer in
                         if !newAnswer.isEmpty {
-                            self.storage.add(answer: newAnswer)
+                            self.storage.add(answer: AnswerModel(answer: newAnswer))
                             self.updateDataSource()
                         }
                     })
@@ -43,6 +43,6 @@ class SettingsViewController: BaseViewController<SettingsView> {
     }
     
     private func updateDataSource() {
-        self.rootView?.dataSource = self.storage.allAnswers()
+        self.rootView?.dataSource = self.storage.allAnswers() ?? []
     }
 }
