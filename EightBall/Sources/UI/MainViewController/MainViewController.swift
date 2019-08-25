@@ -14,15 +14,6 @@ class MainViewController: BaseViewController<MainView>, Typeable {
     
     private let networkService = NetworkService()
     
-    // MARK: - View Lifecycle
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        self.configureUI()
-        
-    }
-    
     // MARK: - Public API
     
     override func configureUI() {
@@ -37,8 +28,8 @@ class MainViewController: BaseViewController<MainView>, Typeable {
         }
     }
     
-    @objc func onSettings(_ sender: UIBarButtonItem) {
-        debugPrint(#function)
+    @objc func onSettings() {
+        self.present(UINavigationController(rootViewController: SettingsViewController()), animated: true)
     }
     
     // MARK: - Private API

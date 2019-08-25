@@ -22,6 +22,9 @@
 		62A3F24C231292F10041134D /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A3F24B231292F10041134D /* UIViewController+Alert.swift */; };
 		62A3F24F231298970041134D /* String+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A3F24E231298970041134D /* String+Random.swift */; };
 		62A3F2552312A6EA0041134D /* TransitionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A3F2542312A6EA0041134D /* TransitionView.swift */; };
+		62A3F2582312B7C10041134D /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A3F2572312B7C10041134D /* SettingsView.swift */; };
+		62A3F25A2312B7DA0041134D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A3F2592312B7DA0041134D /* SettingsViewController.swift */; };
+		62A3F25C2312B7EB0041134D /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62A3F25B2312B7EB0041134D /* SettingsViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +45,9 @@
 		62A3F24B231292F10041134D /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 		62A3F24E231298970041134D /* String+Random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Random.swift"; sourceTree = "<group>"; };
 		62A3F2542312A6EA0041134D /* TransitionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionView.swift; sourceTree = "<group>"; };
+		62A3F2572312B7C10041134D /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		62A3F2592312B7DA0041134D /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		62A3F25B2312B7EB0041134D /* SettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +123,7 @@
 		62A3F22C2312642A0041134D /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				62A3F2562312B7A40041134D /* SettingsViewController */,
 				62A3F246231290CA0041134D /* BaseViewController */,
 				62A3F231231264C10041134D /* MainViewController */,
 			);
@@ -230,6 +237,16 @@
 			path = TransitionView;
 			sourceTree = "<group>";
 		};
+		62A3F2562312B7A40041134D /* SettingsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				62A3F2572312B7C10041134D /* SettingsView.swift */,
+				62A3F2592312B7DA0041134D /* SettingsViewController.swift */,
+				62A3F25B2312B7EB0041134D /* SettingsViewController.xib */,
+			);
+			path = SettingsViewController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -291,6 +308,7 @@
 				62A3F237231265380041134D /* MainViewController.xib in Resources */,
 				62A3F222231261760041134D /* LaunchScreen.storyboard in Resources */,
 				62A3F21F231261760041134D /* Assets.xcassets in Resources */,
+				62A3F25C2312B7EB0041134D /* SettingsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,9 +328,11 @@
 				62A3F24C231292F10041134D /* UIViewController+Alert.swift in Sources */,
 				62A3F248231290EA0041134D /* BaseViewController.swift in Sources */,
 				62A3F233231264F30041134D /* MainView.swift in Sources */,
+				62A3F25A2312B7DA0041134D /* SettingsViewController.swift in Sources */,
 				62A3F24F231298970041134D /* String+Random.swift in Sources */,
 				62A3F24123128BE40041134D /* NSError+Extensions.swift in Sources */,
 				62A3F23923126C6D0041134D /* Typeable.swift in Sources */,
+				62A3F2582312B7C10041134D /* SettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
