@@ -31,6 +31,7 @@
 		62E97F8C2312D4D80035CAE2 /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E97F8B2312D4D80035CAE2 /* UITableView+Extensions.swift */; };
 		62E97F8F2312D52B0035CAE2 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E97F8E2312D52B0035CAE2 /* Functions.swift */; };
 		62E97F922312DCD20035CAE2 /* Optional+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E97F912312DCD20035CAE2 /* Optional+Extensions.swift */; };
+		62E97F982312F5930035CAE2 /* ShakeDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E97F972312F5930035CAE2 /* ShakeDetector.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		62E97F8B2312D4D80035CAE2 /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
 		62E97F8E2312D52B0035CAE2 /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 		62E97F912312DCD20035CAE2 /* Optional+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+Extensions.swift"; sourceTree = "<group>"; };
+		62E97F972312F5930035CAE2 /* ShakeDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeDetector.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +183,7 @@
 		62A3F231231264C10041134D /* MainViewController */ = {
 			isa = PBXGroup;
 			children = (
+				62E97F962312F57F0035CAE2 /* Private */,
 				62A3F232231264F30041134D /* MainView.swift */,
 				62A3F2342312652A0041134D /* MainViewController.swift */,
 				62A3F236231265380041134D /* MainViewController.xib */,
@@ -305,6 +308,14 @@
 			path = Optional;
 			sourceTree = "<group>";
 		};
+		62E97F962312F57F0035CAE2 /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				62E97F972312F5930035CAE2 /* ShakeDetector.swift */,
+			);
+			path = Private;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -386,6 +397,7 @@
 				62A3F23F231286F50041134D /* AnswerModel.swift in Sources */,
 				62A3F2552312A6EA0041134D /* TransitionView.swift in Sources */,
 				62A3F24C231292F10041134D /* UIViewController+Alert.swift in Sources */,
+				62E97F982312F5930035CAE2 /* ShakeDetector.swift in Sources */,
 				62A3F248231290EA0041134D /* BaseViewController.swift in Sources */,
 				62A3F233231264F30041134D /* MainView.swift in Sources */,
 				62A3F25A2312B7DA0041134D /* SettingsViewController.swift in Sources */,
@@ -535,7 +547,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LHD3993YVW;
 				INFOPLIST_FILE = EightBall/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -552,7 +566,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LHD3993YVW;
 				INFOPLIST_FILE = EightBall/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

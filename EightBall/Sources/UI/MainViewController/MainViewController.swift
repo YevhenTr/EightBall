@@ -14,13 +14,21 @@ class MainViewController: BaseViewController<MainView> {
     
     private let networkService = NetworkService()
     
+    // MARK: - View Lifecycle
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        self.configureShakeDetector()
+    }
+    
     // MARK: - Public API
     
     override func configureUI() {
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Settings", style: .plain, target: self, action: #selector(self.onSettings))
     }
     
-    @IBAction func onTest(_ sender: UIButton) {
+    func onShake() {
         if let question = self.rootView?.getQuestion() {
             self.sendRequest(question: question)
         } else {
@@ -43,5 +51,13 @@ class MainViewController: BaseViewController<MainView> {
                 self?.showAlert(error: error)
             }
         }
+    }
+    
+    private func configureShakeDetector() {
+        let detector = ShakeDetector()
+        
+        detector.becomeFirstResponder()
+        detector.onShake = { [weak self] in self?.onShake() }
+        self.rootView?.addSubview(detector)
     }
 }
