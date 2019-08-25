@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainViewController: BaseViewController<MainView>, Typeable {
+class MainViewController: BaseViewController<MainView> {
 
     // MARK: - Properties
     

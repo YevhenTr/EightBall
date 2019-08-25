@@ -10,12 +10,36 @@ import UIKit
 
 class SettingsView: UIView {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    // MARK: - Properties
+    
+    @IBOutlet var tableView: UITableView?
+    var dataSource = ["aaaa", "bbb"]
+    
+    // MARK: - View Lifecycle
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        self.tableView?.delegate = self
+        self.tableView?.dataSource = self
+        self.tableView?.register(AnswerTableViewCell.self)
     }
-    */
+    
+    // MARK: - Public API
+}
 
+extension SettingsView: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.dataSource.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withCellClass: AnswerTableViewCell.self, for: indexPath)
+        
+        (cell as? AnswerTableViewCell).map {
+            $0.textLabel?.text = indexPath.row.description
+        }
+        
+        return cell
+    }
 }
