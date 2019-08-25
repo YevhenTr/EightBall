@@ -10,12 +10,11 @@ import UIKit
 
 class MainView: UIView {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
-
+    // MARK - Properties
+    
+    @IBOutlet var invitationLabel: UILabel?
+    @IBOutlet var answerLabel: UILabel?
+    @IBOutlet var tooltipLabel: UILabel?
+    
+    // MARK: - Public API
 }

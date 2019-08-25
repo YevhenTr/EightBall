@@ -13,6 +13,16 @@ class MainViewController: UIViewController, Typeable {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.configureUI()
+    }
+    
+    // MARK: - Public API
+    
+    func configureUI() {
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Settings", style: .plain, target: self, action: #selector(self.onSettings))
+    }
+    
+    @objc func onSettings(_ sender: UIBarButtonItem) {
+        debugPrint(#function)
     }
 }
