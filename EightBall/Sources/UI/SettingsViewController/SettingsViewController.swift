@@ -14,10 +14,8 @@ class SettingsViewController: BaseViewController<SettingsView> {
     
     // MARK: - Public API
 
-    override func configureUI() {
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(self.onCancel))
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(self.onAdd))
-        
+    override func configure() {
+        self.configureUI()
         self.updateDataSource()
     }
     
@@ -38,6 +36,11 @@ class SettingsViewController: BaseViewController<SettingsView> {
     }
     
     // MARK: - Private API
+    
+    private func configureUI() {
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(self.onCancel))
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(self.onAdd))
+    }
     
     private func updateDataSource() {
         self.rootView?.dataSource = self.storage.allAnswers()

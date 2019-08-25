@@ -21,12 +21,12 @@ class BaseViewController<RootView>: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.configureUI()
+        self.configure()
     }
     
     // MARK: - Public API
     
-    func configureUI() {
+    func configure() {
         fatalError("Not implented in base class")
     }
 

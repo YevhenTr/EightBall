@@ -18,13 +18,9 @@ struct AnswerModel: Codable {
 
 struct AnswerContentModel: Codable {
     
-    let question: String
     let answer: String
-    let type: String
     
     enum CodingKeys: String, CodingKey {
-        case question = "question"
         case answer = "answer"
-        case type = "type"
     }
 }

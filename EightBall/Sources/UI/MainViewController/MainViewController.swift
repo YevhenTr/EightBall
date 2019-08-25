@@ -14,18 +14,11 @@ class MainViewController: BaseViewController<MainView> {
     
     private let networkService = NetworkService()
     
-    // MARK: - View Lifecycle
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        self.configureShakeDetector()
-    }
-    
     // MARK: - Public API
     
-    override func configureUI() {
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Settings", style: .plain, target: self, action: #selector(self.onSettings))
+    override func configure() {
+        self.configureShakeDetector()
+        self.configureUI()
     }
     
     func onShake() {
@@ -42,6 +35,18 @@ class MainViewController: BaseViewController<MainView> {
     
     // MARK: - Private API
     
+    private func configureUI() {
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Settings", style: .plain, target: self, action: #selector(self.onSettings))
+    }
+    
+    private func configureShakeDetector() {
+        let detector = ShakeDetector()
+        
+        detector.becomeFirstResponder()
+        detector.onShake = { [weak self] in self?.onShake() }
+        self.rootView?.addSubview(detector)
+    }
+    
     private func sendRequest(question: String) {
         self.networkService.answer(to: question) { [weak self] result in
             switch result {
@@ -51,13 +56,5 @@ class MainViewController: BaseViewController<MainView> {
                 self?.showAlert(error: error)
             }
         }
-    }
-    
-    private func configureShakeDetector() {
-        let detector = ShakeDetector()
-        
-        detector.becomeFirstResponder()
-        detector.onShake = { [weak self] in self?.onShake() }
-        self.rootView?.addSubview(detector)
     }
 }

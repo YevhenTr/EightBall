@@ -128,11 +128,8 @@
 		62A3F22B2312619D0041134D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				62E97F902312DCC00035CAE2 /* Optional */,
-				62E97F8A2312D4BF0035CAE2 /* UITableView */,
-				62A3F24D231298820041134D /* String */,
-				62A3F24A231292CA0041134D /* UIViewController */,
-				62A3F24323128C050041134D /* NSError */,
+				62E97F9A2312FA3B0035CAE2 /* UIKit */,
+				62E97F992312FA280035CAE2 /* Foundation */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -174,6 +171,7 @@
 		62A3F230231264980041134D /* AppKit */ = {
 			isa = PBXGroup;
 			children = (
+				62E97F9B2312FAFB0035CAE2 /* ShakeDetector */,
 				62A3F2532312A6D00041134D /* TransitionView */,
 				62A3F24223128BF80041134D /* Parser */,
 			);
@@ -183,7 +181,6 @@
 		62A3F231231264C10041134D /* MainViewController */ = {
 			isa = PBXGroup;
 			children = (
-				62E97F962312F57F0035CAE2 /* Private */,
 				62A3F232231264F30041134D /* MainView.swift */,
 				62A3F2342312652A0041134D /* MainViewController.swift */,
 				62A3F236231265380041134D /* MainViewController.xib */,
@@ -308,12 +305,31 @@
 			path = Optional;
 			sourceTree = "<group>";
 		};
-		62E97F962312F57F0035CAE2 /* Private */ = {
+		62E97F992312FA280035CAE2 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				62A3F24323128C050041134D /* NSError */,
+				62A3F24D231298820041134D /* String */,
+				62E97F902312DCC00035CAE2 /* Optional */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		62E97F9A2312FA3B0035CAE2 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				62A3F24A231292CA0041134D /* UIViewController */,
+				62E97F8A2312D4BF0035CAE2 /* UITableView */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		62E97F9B2312FAFB0035CAE2 /* ShakeDetector */ = {
 			isa = PBXGroup;
 			children = (
 				62E97F972312F5930035CAE2 /* ShakeDetector.swift */,
 			);
-			path = Private;
+			path = ShakeDetector;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
