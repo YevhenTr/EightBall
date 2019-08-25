@@ -30,17 +30,27 @@ class MainViewController: BaseViewController<MainView>, Typeable {
     }
     
     @IBAction func onTest(_ sender: UIButton) {
-        self.networkService.answer(to: "Test") { [weak self] result in
-            switch result {
-            case let .success(answer):
-                break
-            case let .failure(error):
-                self?.showAlert(error: error)
-            }
+        if let question = self.rootView?.getQuestion() {
+            self.sendRequest(question: question)
+        } else {
+            self.showAlert(error: NSError.wrongQuestion)
         }
     }
     
     @objc func onSettings(_ sender: UIBarButtonItem) {
         debugPrint(#function)
+    }
+    
+    // MARK: - Private API
+    
+    private func sendRequest(question: String) {
+        self.networkService.answer(to: question) { [weak self] result in
+            switch result {
+            case let .success(answer):
+                self?.rootView?.show(answer: answer)
+            case let .failure(error):
+                self?.showAlert(error: error)
+            }
+        }
     }
 }

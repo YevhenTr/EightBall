@@ -8,10 +8,11 @@
 
 struct AnswerModel: Codable {
     
-    let answer: AnswerContentModel
+    let content: AnswerContentModel
+    var answer: String { return self.content.answer }
     
     enum CodingKeys: String, CodingKey {
-        case answer = "magic"
+        case content = "magic"
     }
 }
 

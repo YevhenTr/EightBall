@@ -17,4 +17,14 @@ class MainView: UIView {
     @IBOutlet var tooltipLabel: UILabel?
     
     // MARK: - Public API
+    
+    func show(answer: AnswerModel) {
+        DispatchQueue.main.async { [weak self] in
+            self?.answerLabel?.text = answer.answer
+        }
+    }
+    
+    func getQuestion() -> String? {
+        return String.random()
+    }
 }

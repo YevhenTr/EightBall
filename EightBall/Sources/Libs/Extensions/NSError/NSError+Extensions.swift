@@ -14,4 +14,9 @@ extension NSError {
         
         return NSError(domain: "Unexpected behavior: network response has no data, no error.", code: 9999, userInfo: nil)
     }
+    
+    static var wrongQuestion: NSError {
+        
+        return NSError(domain: "Wrong question: string is nil.", code: 9998, userInfo: nil)
+    }
 }
