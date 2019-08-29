@@ -29,7 +29,7 @@ struct AnswerModel: Codable {
 extension AnswerModel {
     
     static var yesModel: AnswerModel {
-        return AnswerModel(answer: "YES!")
+        return AnswerModel(answer: AppTextConstants.yes)
     }
     
     func asCDAnswerModel(context: NSManagedObjectContext) -> CDAnswerModel {

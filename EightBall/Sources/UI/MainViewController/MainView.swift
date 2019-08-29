@@ -10,7 +10,11 @@ import UIKit
 
 class MainView: UIView {
 
-    // MARK - Properties
+    // MARK: - Subtypes
+
+    typealias Text = AppTextConstants.Main
+
+    // MARK: - Properties
     
     @IBOutlet var invitationLabel: UILabel?
     @IBOutlet var answerLabel: UILabel?
@@ -25,7 +29,7 @@ class MainView: UIView {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        self.invitationLabel?.text = "Shake iPhone to get answer!"
+        self.invitationLabel?.text = Text.invitation
         [self.answerLabel, self.tooltipLabel]
             .forEach { $0?.text = "" }
     }
@@ -52,7 +56,7 @@ class MainView: UIView {
     
     private func updateUI() {
         self.invitationLabel?.text = ""
-        self.tooltipLabel?.text = "Shake again if you want more answers!"
+        self.tooltipLabel?.text = Text.tooltip
         self.isStarted = true
     }
 }

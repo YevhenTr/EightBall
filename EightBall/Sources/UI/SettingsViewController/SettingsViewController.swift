@@ -10,6 +10,10 @@ import UIKit
 
 class SettingsViewController: BaseViewController<SettingsView> {
     
+    // MARK: - Subtypes
+
+    typealias Text = AppTextConstants.Settings
+
     // MARK: - Public API
 
     override func configure() {
@@ -22,9 +26,9 @@ class SettingsViewController: BaseViewController<SettingsView> {
     }
     
     @objc func onAdd() {
-        self.showForm(title: "New Answer",
-                      message: "Add new predefined answer.",
-                      placeholder: "New Aswer",
+        self.showForm(title: Text.formTitle,
+                      message: Text.formMessage,
+                      placeholder: Text.formPlaceholder,
                       completion: self.newAnswerHandling)
     }
     

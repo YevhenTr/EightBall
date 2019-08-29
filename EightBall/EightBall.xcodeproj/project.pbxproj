@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3FF9ACFC2317F26000488B91 /* AppTextConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF9ACFB2317F26000488B91 /* AppTextConstants.swift */; };
+		3FF9ACFE2317F3C000488B91 /* AppTextConstants+Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF9ACFD2317F3C000488B91 /* AppTextConstants+Main.swift */; };
+		3FF9AD002317F54800488B91 /* AppTextConstants+Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF9ACFF2317F54800488B91 /* AppTextConstants+Settings.swift */; };
 		62A3F218231261750041134D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A3F217231261750041134D /* AppDelegate.swift */; };
 		62A3F21F231261760041134D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62A3F21E231261760041134D /* Assets.xcassets */; };
 		62A3F222231261760041134D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62A3F220231261760041134D /* LaunchScreen.storyboard */; };
@@ -35,6 +38,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3FF9ACFB2317F26000488B91 /* AppTextConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTextConstants.swift; sourceTree = "<group>"; };
+		3FF9ACFD2317F3C000488B91 /* AppTextConstants+Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppTextConstants+Main.swift"; sourceTree = "<group>"; };
+		3FF9ACFF2317F54800488B91 /* AppTextConstants+Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppTextConstants+Settings.swift"; sourceTree = "<group>"; };
 		62A3F214231261750041134D /* EightBall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EightBall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62A3F217231261750041134D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		62A3F21E231261760041134D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -75,6 +81,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3FF9ACFA2317F25400488B91 /* AppTextConstants */ = {
+			isa = PBXGroup;
+			children = (
+				3FF9ACFB2317F26000488B91 /* AppTextConstants.swift */,
+				3FF9ACFD2317F3C000488B91 /* AppTextConstants+Main.swift */,
+				3FF9ACFF2317F54800488B91 /* AppTextConstants+Settings.swift */,
+			);
+			path = AppTextConstants;
+			sourceTree = "<group>";
+		};
 		62A3F20B231261750041134D = {
 			isa = PBXGroup;
 			children = (
@@ -171,6 +187,7 @@
 		62A3F230231264980041134D /* AppKit */ = {
 			isa = PBXGroup;
 			children = (
+				3FF9ACFA2317F25400488B91 /* AppTextConstants */,
 				62E97F9B2312FAFB0035CAE2 /* ShakeDetector */,
 				62A3F2532312A6D00041134D /* TransitionView */,
 				62A3F24223128BF80041134D /* Parser */,
@@ -411,6 +428,7 @@
 				62E97F922312DCD20035CAE2 /* Optional+Extensions.swift in Sources */,
 				62A3F218231261750041134D /* AppDelegate.swift in Sources */,
 				62A3F23F231286F50041134D /* FullAnswerModel.swift in Sources */,
+				3FF9AD002317F54800488B91 /* AppTextConstants+Settings.swift in Sources */,
 				62A3F2552312A6EA0041134D /* TransitionView.swift in Sources */,
 				62A3F24C231292F10041134D /* UIViewController+Alert.swift in Sources */,
 				62E97F982312F5930035CAE2 /* ShakeDetector.swift in Sources */,
@@ -420,11 +438,13 @@
 				62A3F2622312C3C20041134D /* CDAnswerModel.xcdatamodeld in Sources */,
 				62E97F8F2312D52B0035CAE2 /* Functions.swift in Sources */,
 				62A3F25F2312BC700041134D /* StorageService.swift in Sources */,
+				3FF9ACFE2317F3C000488B91 /* AppTextConstants+Main.swift in Sources */,
 				62E97F882312D1980035CAE2 /* AnswerTableViewCell.swift in Sources */,
 				62A3F24F231298970041134D /* String+Random.swift in Sources */,
 				62A3F24123128BE40041134D /* NSError+Extensions.swift in Sources */,
 				62A3F2582312B7C10041134D /* SettingsView.swift in Sources */,
 				62E97F8C2312D4D80035CAE2 /* UITableView+Extensions.swift in Sources */,
+				3FF9ACFC2317F26000488B91 /* AppTextConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

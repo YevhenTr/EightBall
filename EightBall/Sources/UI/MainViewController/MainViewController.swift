@@ -10,6 +10,10 @@ import UIKit
 
 class MainViewController: BaseViewController<MainView> {
 
+    // MARK: - Subtypes
+
+    typealias Text = AppTextConstants.Main
+
     // MARK: - Properties
     
     private let networkService = NetworkService()
@@ -36,7 +40,7 @@ class MainViewController: BaseViewController<MainView> {
     // MARK: - Private API
     
     private func configureUI() {
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Settings", style: .plain, target: self, action: #selector(self.onSettings))
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: Text.settingsTitle, style: .plain, target: self, action: #selector(self.onSettings))
     }
     
     private func configureShakeDetector() {

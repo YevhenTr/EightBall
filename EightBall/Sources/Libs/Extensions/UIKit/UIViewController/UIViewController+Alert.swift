@@ -10,9 +10,11 @@ import UIKit
 
 extension UIViewController {
     
+    typealias Text = AppTextConstants
+
     func showAlert(title: String,
                    message: String,
-                   actions: [UIAlertAction]? = [UIAlertAction(title: "OK", style: .cancel, handler: nil)]) {
+                   actions: [UIAlertAction]? = [UIAlertAction(title: Text.ok, style: .cancel, handler: nil)]) {
         let alertController = UIAlertController(title: title,
                                                 message: message,
                                                 preferredStyle: .alert)
@@ -21,7 +23,7 @@ extension UIViewController {
     }
     
     func showAlert(error: Error) {
-        self.showAlert(title: "Error", message: error.localizedDescription)
+        self.showAlert(title: Text.error, message: error.localizedDescription)
     }
     
     func showForm(title: String,
@@ -31,8 +33,8 @@ extension UIViewController {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alertController.addTextField() { $0.placeholder =  placeholder }
         
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
+        let cancelAction = UIAlertAction(title: Text.cancel, style: .cancel, handler: nil)
+        let okAction = UIAlertAction(title: Text.ok, style: .default) { _ in
             alertController.textFields?.first?.text.map { completion($0) }
         }
         
