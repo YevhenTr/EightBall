@@ -1,0 +1,37 @@
+# Тестове завдання для Yalantis iOS School
+
+1. Завдання необхідно виконати на Swift.
+2. Не забувайте про принципи розробки, правила іменування, поділ відповідальностей
+3. Будь-яка архітектура: MVC, MVP, MVVM, VIPER, VIP ...
+4. Використовувати Auto Layout для верстки
+5. Мінімум готових 3rd party рішень
+5. Результати запушити в репозиторій на Github / Gitlab / Bitbucket
+6. Надіслати інвайт аккаунту yalantis.ios.school@gmail.com для перевірки
+7. Написати куратору школи Дар’ї на dasha.kornienko@yalantis.net , що завдання виконано і готове до перевірки
+
+Намагайтеся показати красиву історію розробки в Git.
+Оцінюватися буде НЕ гарний UI, а коректне функціонування й якість коду: акуратність, загальна архітектура, розділення відповідальностей.
+
+
+
+
+# 8-Ball Without Actual Ball
+### Application to get answer on any question user asks :)
+
+
+
+DESCRIPTION:
+User should shake device to get answer.
+Application gets random answers from endpoint https://8ball.delegator.com/magic/JSON/<question_string>. You are free to use any string as parameter (no need to send actual question) 
+In case of internet connection absence or request failure, application uses one of hardcoded answers
+Application should have two screens: Main and Settings
+Main screen contains call-to-shake text or answer, depending on current application state
+Settings screen allows user to set and save hardcoded answers  like ""Just do it!"", ""Change your mind"", etc.
+You are free to use any design/layout you want.
+You are free to add any other rules/functionality if they don't counter described ones.
+
+SPOILER: 
+For shake detection you may use following methods of UIResponder:
+func motionBegan(_ motion: UIEvent.EventSubtype, with event: UIEvent?)
+func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) 
+func motionCancelled(_ motion: UIEvent.EventSubtype, with event: UIEvent?)"
