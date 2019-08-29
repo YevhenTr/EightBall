@@ -17,7 +17,18 @@ class MainViewController: BaseViewController<MainView> {
     // MARK: - Properties
     
     private let networkService = NetworkService()
-    
+
+    // MARK: - View Lifecycle
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        self.view.subviews
+            .filter( { $0 is ShakeDetector } )
+            .first?
+            .becomeFirstResponder()
+    }
+
     // MARK: - Public API
     
     override func configure() {
@@ -46,7 +57,6 @@ class MainViewController: BaseViewController<MainView> {
     private func configureShakeDetector() {
         let detector = ShakeDetector()
         
-        detector.becomeFirstResponder()
         detector.onShake = { [weak self] in self?.onShake() }
         self.rootView?.addSubview(detector)
     }
