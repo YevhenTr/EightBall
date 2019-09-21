@@ -36,6 +36,6 @@ func motionBegan(_ motion: UIEvent.EventSubtype, with event: UIEvent?)
 func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) 
 func motionCancelled(_ motion: UIEvent.EventSubtype, with event: UIEvent?)"
 
-HOMEWORK_1: new line
-HOMEWORK_1: let's resolve a conflict
-HOMEWORK_1: finished
+HOMEWORK_1: new line  
+HOMEWORK_1: let's resolve a conflict  
+HOMEWORK_1: finished  
