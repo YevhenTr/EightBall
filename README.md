@@ -35,3 +35,5 @@ For shake detection you may use following methods of UIResponder:
 func motionBegan(_ motion: UIEvent.EventSubtype, with event: UIEvent?)
 func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) 
 func motionCancelled(_ motion: UIEvent.EventSubtype, with event: UIEvent?)"
+
+HOMEWORK_1: new line
