@@ -38,3 +38,4 @@ func motionCancelled(_ motion: UIEvent.EventSubtype, with event: UIEvent?)"
 
 HOMEWORK_1: new line
 HOMEWORK_1: let's resolve a conflict
+HOMEWORK_1: finished
